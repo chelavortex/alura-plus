@@ -6,7 +6,7 @@
     --subtitulos-: #f9f9f9;
     --cor-de-fundo: #00030C;
     --fonte-principal: 'Inter';
-    --botao-azul-efeito:#da2be0;
+    --botao-azul-efeito:#88acd8;
 
 }
 
@@ -36,7 +36,7 @@ body {
 
     height: 100vh;
     display: grid;
-    grid-template-columns: 50%;
+    grid-template-columns: 50% 50%;
 }
 
 .container__botao {
@@ -62,10 +62,10 @@ body {
 .container__aviso {
  font-size: 12px;
  color:var(--cinza-secundario);
- margin-top: 1em;
+ 
 }
 
-.texto__principal {
+.container__titulo {
 
     font-size: 28px;
     font-weight: 700;
@@ -82,9 +82,7 @@ body {
 }
 
 .secundario__imagem {
-    width: 50%;
-    display: flex;
-    flex-direction: column-reverse;
+    width: 80%;
 
 }
 
@@ -92,15 +90,7 @@ body {
  
     align-items: center;
     margin: 0 10em;
-    display: flex;
-    box-sizing: content-box;
-    
 
-
-}
-
-.container_descricao {
-    align-items: center;
     
 }
 
@@ -109,34 +99,25 @@ body {
     font-weight: 700;
     font-size: 48px;
     color: var(--branco-principal);
-    margin-bottom: 0.5em;
-    margin-left: 0.5em;
+    margin-bottom:0.1em;
 }
 
 .descricao__texto {
 
-    margin-left: 0.2em;
     color: var(--cinza-secundario);
 }
 
-.container__botao {
-    display: block;
+.secundario__botao {
+    display: inline-block;
     margin-top: 1em;
 
 }
 .container__descricao{
     
-    text-align: center;
-    justify-content: space-evenly;
-    
+   padding:2em;
+   align-items: center;
+  
 }
-
-.terciario__imagem{
-
-    width: 60;
-    margin-bottom: 50em 0;
-}
-
 
 
 .dispositivos__lista{
@@ -153,10 +134,11 @@ body {
 }
 
 .dispositivos__tituilo{
-    font-size: 48px;
+    font-size: 32px;
     color: var(--branco-principal);
-    margin: 50em 0;
+
 }
+
 .lista__item {
     font-size: 32px;
     color:var(--subtitulos-);
@@ -216,4 +198,36 @@ body {
 
     background-color: var(--botao-azul-efeito);
     color: var(--subtitulos-);
+}
+
+@media screen and (max-width: 768px) {
+
+    .container {
+        display:block;
+        background-image:none;
+    }
+    .container__imagem {
+
+        width: 50vw;
+    }
+
+    .container__caixa {
+        margin: 2em 2em;
+    }
+
+    .secudario{
+
+        margin:0;
+        text-align: center;
+    }
+    .secundario__imagem {
+        width: 50vw;
+    }
+
+    .dispositivos__lista {
+        display:block;
+    }
+    .rodape__lista {
+        display:block
+    }
 }
